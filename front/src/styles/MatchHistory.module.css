@@ -1,0 +1,101 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-dark-color);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /* width: 100%; */
+    border: 1px solid var(--secondary-light-color);
+    /* flex-grow: 0; */
+    text-align: center;
+    margin-bottom: 1rem;
+} 
+ 
+.opponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: auto ;
+    gap: 2rem;
+    width: 40%;
+}
+
+.avatar {
+    background: url('../styles/60111.jpg') no-repeat center center/cover;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.score {
+    font-weight: bold;
+    width: 20%;
+    white-space: nowrap;
+}
+
+.win {
+    font-weight: bold;
+    width: 20%;
+    color: green;
+}
+
+.loss {
+    font-weight: bold;
+    width: 20%;
+    color: red;
+}
+.result {
+    font-weight: bold;
+    width: 20%;
+}
+.date {
+    width: 20%;
+    color: gray;
+}
+
+.card:first-child {
+    border-radius: 8px;
+    /* background: var(--transparent-top-dark-gradient-color); */
+    background-color: #301934;
+    color: blanchedalmond;
+    font-family: neue-pixel-font;
+    font-weight: bold;
+}
+
+@media(max-width: 800px) {
+    .card {
+        margin-right: 0;
+        font-size: 1rem;
+        white-space: nowrap;
+        justify-content: space-between;
+    }
+    .date {
+        display: none;
+    }
+    .opponent {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .opponent .avatar{
+        display: none;
+        /* flex-direction: column; */
+    }
+    .card:first-child {
+        font-family: neue-pixel-font;
+        font-weight: bold; 
+    }
+}
+
+@media(max-width: 500px) {
+    .card:first-child {
+        font-family: neue-pixel-font;
+    }
+    .card {
+        justify-content: space-between;
+    }
+}
+
+  

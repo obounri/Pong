@@ -1,0 +1,283 @@
+.game-board,
+.game-board-theme-0,
+.game-board-theme-1,
+.game-board-theme-2,
+.game-board-pause {
+    font-family: classic-font;
+    box-sizing: border-box;
+    position: relative;
+    width: 75vw;
+    height: 60vh;
+    /* margin: 4rem 1rem; */
+    margin-top: 4rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: hsl(0, 0%, 0%, 0.7);
+    transition: background 0.2s ease-in;
+    overflow: hidden;
+}
+
+.game-board-pause {
+    background: hsl(0, 0%, 100%, 0.4);
+}
+
+/* themes */
+.game-board-theme-0 {
+    background: #FDDC71;
+    border: 3px outset #2D323D;
+}
+
+.game-board-theme-1 {
+    background: #B7D354;
+    border: 3px outset #55629B;
+}
+
+.game-board-theme-2 {
+    background: #F0F0DC;
+    border: 3px outset #FAC800;
+}
+
+
+/* ********** */
+
+/* Paddles styles */
+.right-paddle,
+.left-paddle {
+    width: 1vw;
+    height: 12vh;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+}
+
+.left-paddle {
+    left: 0;
+    box-shadow: orange 2px 2px 4px;
+}
+
+.right-paddle {
+    right: 0;
+    box-shadow:  -2px 2px 4px blue;
+}
+
+.game-board-pause .ball {
+    background: #fff;
+}
+
+.game-board-pause .right-paddle,
+.game-board-pause .left-paddle {
+    background: hsl(0, 0%, 0%, 0.8);
+}
+
+
+/*  */
+.game-board-theme-0 .right-paddle{
+    background: #56425B;
+    box-shadow:  -2px 2px 4px #814566;
+}
+
+.game-board-theme-0 .left-paddle {
+    background: #C45B63;
+    box-shadow: #EA8E77 2px 2px 4px;
+}
+
+/*  */
+.game-board-theme-1 .right-paddle{
+    background: #55629B;
+    box-shadow:  -2px 2px 4px #538BB9;
+}
+
+.game-board-theme-1 .left-paddle {
+    background: #4D8A70;
+    box-shadow: #76C663 2px 2px 4px;
+}
+
+/*  */
+.game-board-theme-2 .right-paddle{
+    background: #25C840;
+    box-shadow:  -2px 2px 4px #009987;
+}
+
+.game-board-theme-2 .left-paddle {
+    background: #20A0C8;
+    box-shadow: #00CFBE 2px 2px 4px;
+}
+/*  */
+
+/* Ball styles */
+.ball {
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    background: #f4f4f4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+/*  */
+.game-board-theme-0 .ball {
+    background: #9B70B8;
+}
+
+.game-board-theme-1 .ball {
+    background: #58D1C6;
+}
+
+.game-board-theme-2 .ball {
+    background: #D24040;
+}
+/*  */
+
+
+.pause {
+    position: absolute;
+    font-size: 3rem;
+    top: 25% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+.pause::after {
+    content: 'Pause';
+    color: hsl(0, 0%, 0%, 0.8);
+}
+
+.start {
+    position: absolute;
+    top: 25% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    color: hsl(0, 0%, 0%, 0.8);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+.start::after {
+    content: 'Be Ready';
+    margin-left: 1rem;
+    color: var(--primary-dark-colors);
+    cursor: pointer;
+}
+
+.btn {
+    position: absolute;
+    font-size: 1rem;
+    padding-right: 9rem;
+    cursor: pointer;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn .restart::after {
+    content: 'Restart';
+    margin-left: 1rem;
+    position: absolute;
+    border-radius: 20px;
+    color: hsl(0, 0%, 0%, 0.8);
+}
+
+
+
+.score {
+    position: absolute;
+    font-size: 1.4em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: var(--secondary-light-color);
+}
+
+@media(max-width: 600px){
+    .start .icon {
+        display: none;
+    }
+    .start,
+    .score,
+    .pause {
+        font-size: 1.2em;
+    }
+}
+
+.game-board-pause .score {
+    color: hsl(0, 0%, 0%, 0.8);
+}
+
+/*  */
+.game-board-theme-0 .score {
+    color: hsla(0, 27%, 24%, 0.6);
+}
+
+.game-board-theme-1 .score {
+    color: #55629ba4;
+}
+
+.game-board-theme-2 .score {
+    color: hsla(0, 27%, 24%, 0.6);
+}
+
+/*  */
+
+.winner {
+    top: 50px;
+    left: 100px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+.winner .winnerx {
+    background: blue;
+    color: #fff;
+    padding: auto;
+    border-radius: 5px;
+}
+
+.winner .winnery {
+    background: orange;
+    color: #f4f4f4;
+    padding: auto;
+    border-radius: 5px;
+} 
+
+/*  */
+.game-board-theme-0 .winner .winnerx {
+    background: #814566;
+    color: #fff;
+}
+
+.game-board-theme-0 .winner .winnery {
+    background: #C45B63;
+    color: #f4f4f4;
+}
+
+.game-board-theme-1 .winner .winnerx {
+    background: #55629B;
+    color: #f4f4f4;
+}
+
+.game-board-theme-1 .winner .winnery {
+    background: #4D8A70;
+    color: #f4f4f4;
+}
+
+.game-board-theme-2 .winner .winnerx {
+    background: #25C840;
+    color: #f4f4f4;
+}
+
+.game-board-theme-2 .winner .winnery {
+    background: #20A0C8;
+    color: #f4f4f4;
+}
+
+/*  */

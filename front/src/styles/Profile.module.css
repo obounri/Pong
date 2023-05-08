@@ -1,0 +1,130 @@
+.container {
+    margin-top: 3.55rem;
+    width: 100%;
+    overflow: scroll;
+    /* min-height: 100%; */
+}
+
+.primaryContainer {
+    gap: 1rem;
+    margin: 0 auto;
+    /* width: 90%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.profileCard {
+    font-size: 1.2rem;
+    width: 90%;
+    /* background: linear-gradient(90deg, rgba(179,91,168,1) 0%, rgba(12,48,100,1) 100%); */
+    display: flex;
+    /* min-height: 20vh; */
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: var(--btn-light-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.896);
+    align-items: center;
+    justify-content: space-between;
+    font-family: neue-pixel-font;
+}
+
+.secondaryCard {
+    flex-direction: column;
+}
+
+.rankContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.secondaryCardTitle {
+    margin-top: 0;
+    font-family: arcade-font;
+    font-weight: 500;
+    color: var(--primary-dark-color);
+}
+.rank {
+
+}
+
+/* .name { */
+    /* color: var(--primary-light-color); */
+    /* } */
+    .avatar {
+        /* background: url('../styles/60111.jpg') no-repeat center center/cover;; */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 1rem;
+    }
+    
+    .matchHistoryCard{
+        width: 100%;
+    }
+    .achievementTitle{
+        margin-top: 0;
+        font-family: arcade-font;
+        font-weight: 400;
+        color: var(--primary-dark-color);
+    }
+    .achievements {
+        width: 40%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        align-items: center;
+    }
+    
+    .achievements li {
+        list-style: none;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .achievements ul {
+        list-style: none;
+        padding: 0;
+        /* margin: 0; */
+    }
+    
+    .achievements i {
+        margin-right: 5px;
+    }
+
+    .icon {
+        display: inline;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @media(max-width: 1224px) {
+        .primaryContainer {
+            flex-direction: column;
+        }
+
+        .profileCard{
+            flex-direction: column;
+            text-align: center;
+            width: 90%;
+        }
+        .achievements {
+            padding-left: 0;
+            border-left: 0;
+        }
+        .rankContainer {
+            margin: 1rem;
+        }
+    }
+    @media(max-width: 600px) {
+        .container {
+            overflow: scroll;
+        }
+        .achievementTitle{
+            font-size: 90%;
+        }
+    }

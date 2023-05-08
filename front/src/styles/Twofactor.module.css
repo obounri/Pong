@@ -1,0 +1,115 @@
+.twofactor{
+    width: 100vw;
+    height: 100vh;
+    background: var(--secondary-light-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: neue-pixel-font;
+    /* overflow-y: auto; */
+}
+
+.form {
+    height: 45vh;
+    width: 35vw;
+    background: var(--transparent-top-dark-gradient-color);
+    border: 1px var(--secondary-dark-color) solid;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 var(--primary-dark-color);
+
+}
+
+
+.form p {
+    background: #f4f4f455;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form input {
+    position: relative;
+    padding: 0.8rem 0rem;
+    width: 80%;
+    border: 1px #333 solid;
+    border-radius: 5px;
+    font-size: large;
+    font-family: classic-font;
+    text-align: center;
+}
+
+.form label {
+    padding: .5rem;
+    font-size: large;
+    text-align: center;
+}
+
+.form button {
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    border: solid 1px var(--btn-dark-color);
+    border-radius: 5px;
+    background: var(--btn-light-color);
+    color: #f4f4f4;
+    cursor: pointer;
+    font-family: classic-font;
+    width: 35%;
+    transition: background 0.6s ease;
+}
+
+.form button:hover {
+    background: var(--btn-dark-color);
+    border: solid 1px var(--btn-light-color);
+}
+
+@media (max-width: 1000px) {
+    .form {
+        width: 45%;
+    }
+
+    .form button {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        width: 80%;
+        height: 40%;
+    }
+}
+
+@media (max-width: 400px) {
+    .form {
+        width: 100%;
+    }
+    .form button {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-height: 400px) {
+    .twofactor {
+        font-size: 50%;
+        overflow: auto;
+        min-height: 150vh;
+    }
+    .form {
+        height: 50%;
+    }
+    .form button {
+        padding: 1rem;
+    }
+}

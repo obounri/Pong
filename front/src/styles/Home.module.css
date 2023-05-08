@@ -1,0 +1,133 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box{
+  background: url('./ghost.jpeg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 4rem;
+}
+
+.section h3 {
+  opacity: 0.85;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+
+.section .btns {
+  display: flex;
+  height: 20vh;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+
+
+.btn {
+  color: #f4f4f4;
+  font-size: 1.3rem;
+  background: var(--btn-light-color);
+  padding: 1.2rem 5rem;
+  margin: 0.5rem 1rem;
+  font-family: classic-font;
+  border: 2px var(--primary-dark-color) solid;
+  border-radius: 5px;
+  box-shadow: 4px 3px var(--primary-dark-color);
+  transition: box-shadow 0.3s linear, background 0.3s linear;
+}
+
+.btns .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#intra{
+  border: 1px #f6f6f676 solid;
+}
+
+#google {
+  height: 40px;
+  width: 40px;
+
+}
+
+.btns img {
+  margin-right: 1rem;
+}
+
+
+.btn:hover {
+  background: var(--btn-dark-color);
+  box-shadow: 6px 5px var(--primary-dark-color);
+  color: #fff;
+  border: 2px #333 solid;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+@media (max-height: 320px) {
+  .section {
+    padding: 8rem 0 8rem 0;
+  }
+
+  .box {
+    height: 100%;
+  }
+
+  .btn {
+   padding: 0.9rem 4rem;
+   font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .section {
+    padding: 10rem 0 10rem 0;
+  }
+  
+  .box {
+    background: url('../styles/pngwing.com.png') repeat center center;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .box h3 { 
+    color: var(--primary-dark-color);
+    opacity: 1;
+   }
+
+   .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+   }
+}

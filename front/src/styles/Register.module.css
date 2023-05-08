@@ -1,0 +1,192 @@
+.register {
+    height: 100vh;
+    width: 100vw;
+    background: var(--secondary-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: neue-pixel-font;
+    overflow: auto;
+}
+
+.register form {
+    width: 35vw;
+    height: 50vh;
+    display: flex;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    flex-direction: column;
+    background: var(--transparent-top-dark-gradient-color);
+    border: 1px var(--secondary-dark-color) solid;
+    border-radius: 6px;
+    box-shadow: 4px 4px 0 0 var(--primary-dark-color);
+    transition: box-shdow 0.2s ease-in;
+}
+
+.register form:hover {
+    box-shadow: 5px 5px 0 0 var(--primary-dark-color);
+}
+
+.register form label {
+    display: block;
+    color: #fff;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 60%;
+}
+
+
+.register form input {
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    width: 60%;
+    border: 1px solid var(--secondary-dark-color);
+}
+
+.register form .avatar {
+    display: none;
+}
+
+.register form .costuminput {
+    background: var(--secondary-light-color);
+    font-size: 0.9em;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.btn {
+    position: relative;
+    font-family: neue-pixel-font;
+    font-size: 1em;
+    display: block;
+    width: 60% !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: var(--btn-light-color);
+    box-shadow: 2px 2px 0 0 var(--primary-dark-color);
+    border: 1px solid var(--btn-dark-color);
+    color: #fff;
+    font-style: bold;
+    border-radius: 5px;
+    transition: background .4s ease-in, box-shadow .2s ease-in;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-top: 0.5rem;
+    width: 70%;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+form .checkbox input {
+    margin: 0;
+    padding: 0;
+    width: 10%;
+}
+
+
+.btn:hover {
+    background: var(--btn-dark-color);
+    box-shadow: 3px 3px 0 0 var(--primary-dark-color);
+}
+
+@media (max-width: 1000px) {
+
+    .register form {
+        width: 60vw;
+    }
+
+    .checkbox {
+        width: 80%;
+    }
+
+    .register form input {
+        width: 80%;
+    }
+    
+    .register form label {
+        width: 80%;
+    }
+    form .checkbox input {
+        margin: 0;
+        padding: 0;
+        width: 10%;
+    }
+}
+
+@media (max-height: 1350px) {
+    .register form {
+        /* height: 10vh; */
+    }
+}
+
+@media (max-height: 995px) {
+    .register form {
+        height: 75vh;
+        font-size: 70%;
+    }
+}
+
+@media (max-height: 500px) {
+    .register form {
+        height: 95vh;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        padding-top: 5rem;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .register form {
+        font-size: 70%;
+        width: 80vw;
+    }
+
+    .checkbox {
+        width: 85%;
+    }
+
+    form .checkbox input {
+        margin: 0;
+        padding: 0;
+        width: 10%;
+    }
+    
+    .register form input {
+        width: 85%;
+    }
+
+    .register form label {
+        width: 85%;
+    }
+}
+
+@media (max-width: 400px) {
+    .register {
+        overflow: scroll;
+    }
+    .register form {
+        width: 90vw;
+    }
+
+    form .checkbox input {
+        margin: 0;
+        padding: 0;
+        width: 10%;
+    }
+}

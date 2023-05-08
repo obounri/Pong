@@ -1,0 +1,103 @@
+.navbar,
+._navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background: var(--transparent-top-dark-gradient-color);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none; 
+  color: #fff;
+  font-family: thirteen-pixel-fonts;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+._navbar {
+  border-bottom: var(--btn-light-color) 0.4px solid;
+}
+  
+  
+.navbar .logo,
+.navbar .about{
+  padding: 0.75rem 1rem;
+}
+
+._navbar .icon,
+.navbar .icon {
+  display: none;
+}
+
+
+._navbar ._logo{
+  padding: 0.75rem 1rem;
+  margin-left: 5.5rem;
+}
+
+._navbar ._about{
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+
+  
+.navbar .logo span,
+._navbar ._logo span{
+    color: #fff;
+    transition: background .3s linear;
+    transition: color .2s linear;
+}
+  
+  
+.navbar .about a,
+._navbar ._about a{
+  color: #fff;
+  text-decoration: none;
+  transition: background .3s linear;
+  transition: color .2s linear;
+}
+
+._navbar .about a:hover,
+.navbar .about a:hover {
+  color: #333;
+  padding-right: 1.5rem;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+._navbar ._about a:hover {
+  color: #333;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+
+
+@media(max-width: 1050px){
+
+  ._navbar ._logo {
+    margin: 0;
+  }
+}
+
+@media(max-width: 400px) {
+  .navbar,
+  ._navbar {
+    font-size: 1.1em;
+    overflow: auto;
+  }
+
+  ._navbar ._about a span,
+  .navbar .about a span {
+    display: none;
+  }
+  ._navbar .icon,
+  .navbar .icon {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+}

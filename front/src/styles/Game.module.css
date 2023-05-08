@@ -1,0 +1,311 @@
+.board {
+    background: var(--secondary-light-color);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* Game Theme */
+.themes {
+    display: flex;
+    width: 25%;
+}
+
+.themes ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: hidden;
+    padding: 1rem 1rem 1rem 0;
+    margin: 0;
+  }
+  
+.themes .list {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    transition: max-width 1s ease-in, margin-left 1s ease-in;
+}
+
+.themes ul li {
+    list-style: none;
+    margin-right: 1rem;
+    margin-left: 0;
+    transition: margin-right 1s ease-in-out;
+}
+
+
+.themes .nolist {
+    max-width: 0%;
+    margin-left: 0%;
+    transition: max-width 1s ease-out, margin-left 1s ease-out;
+}
+
+.themes .nolist li {
+    overflow: hidden;
+    transition: overflow 1s ease-out;
+}
+
+#classic { 
+    border-radius: 0 5px 5px 0;
+}
+
+/* button */
+.btn {
+    font-family: classic-font;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#displaybtn {
+    background: hsl(0, 0%, 96%, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 2rem;
+    border-radius: 20px 0px 0px 20px;
+    background: var(--btn-light-color);
+    color: #f4f4f4;
+}
+
+#displaybtn:hover {
+    background: var(--btn-dark-color);
+}
+
+
+/* classic */
+li #classic{
+    background: #f4f4f4;
+    color: var(--btn-dark-color);
+    border: solid 2px var(--btn-light-color);
+}
+
+/* classic */
+li #classicSelected{
+    background: #f4f4f4;
+    color: var(--btn-dark-color);
+    border: solid 3px #444;
+}
+
+li #classic:hover{
+    box-shadow: 1px 5px 5px var(--btn-light-color);
+}
+
+/* fantasy */
+li #fantasy{
+    background: #fddc71;
+    color: #C45B63;
+    border: 2px solid #9b70b8f8;
+}
+
+li #fantasySelected{
+    background: #fddc71;
+    color: #C45B63;
+    border: solid 3px #444;
+}
+
+li #fantasy:hover{
+    box-shadow: 1px 5px 5px #9b70b8f8;
+}
+
+/* arcade */
+li #arcade{
+    background: #B7D354;
+    color: #55629B;
+    border: solid 2px #4D8A70;
+}
+
+li #arcadeSelected{
+    background: #B7D354;
+    color: #55629B;
+    border: solid 3px #444;
+}
+
+li #arcade:hover{
+    box-shadow: 1px 5px 5px #4D8A70;
+}
+
+/* matriax */
+li #matriax{
+    background: #F0F0DC;
+    color: #D24040;
+    border: solid 2px #FAC800;
+}
+
+li #matriaxSelected{
+    background: #F0F0DC;
+    color: #D24040;
+    border: solid 3px #444;
+
+}
+
+li #matriax:hover{
+    box-shadow: 1px 5px 5px #FAC800;
+}
+
+
+
+/* Game Themes (Media) */
+@media(max-width: 800px){
+    #displaybtn .title{
+        display: none;
+    }
+
+    .themes {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .themes ul {
+        margin: 0 1rem;
+        flex-direction: column;
+        transition: margin 0.2s ease-in;
+    }
+    
+    .themes .list {
+        max-height: 200px;
+        padding-top: 0.2rem;
+        overflow-y: hidden;
+        align-items: flex-start;
+    }
+    
+    .themes .nolist ul{
+        margin: 0;
+        transition: margin 3s ease-in;
+    }
+    .themes .nolist {
+        max-height: 0;
+        overflow-y: hidden;
+        margin: -50%;
+        transition: max-height 1s ease-out, overflow-y 1s ease-out, margin 1s ease;
+    }
+    
+    .themes ul li {
+        list-style: none;
+        margin-bottom: 0.4rem;
+        width: 100%;
+    }
+
+    .themes ul li .btn {
+        width: 100%;
+        margin: 0 1rem;
+        font-size: 0.5em;
+    }
+    
+    
+    #displaybtn {
+        margin-top: 1rem;
+        border-radius: 5px;
+        width: 15%;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    #classic { 
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 400px){
+
+    .themes ul li {
+        list-style: none;
+        margin-bottom: 0.4rem;
+        width: 100%;
+    }
+    
+    .themes ul li .btn {
+        width: 100%;
+        margin: 0;
+        padding: 0.4rem 0;
+        font-size: 0.5em;
+    }
+}
+
+
+/* Loading */
+
+.loading {
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+
+/* Game Options */
+
+.game_options {
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff5d;
+    border-radius: 5px;
+    border: 1px solid #f4f4f4;
+}
+
+
+.game_options .queue,
+.game_options .selected,
+.game_options .vs_friend {
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #6E75C4;
+    border: 1px solid #f4f4f4;
+    color: #333;
+    transition: background 0.4s ease, color 0.3s ease-in;
+}
+
+
+.game_options .queue:hover{
+    background: var(--btn-dark-color);
+    color: var(--btn-light-color);
+}
+
+.game_options .vs_friend:hover {
+    background: var(--btn-dark-color);
+    color: var(--btn-light-color);
+}
+
+.game_options button {
+    font-family: arcade-font;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    font-weight:lighter;
+}
+
+.game_options .selected {
+    background: var(--btn-dark-color);
+    color: var(--btn-light-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #fff;
+}
+
+@media(max-width: 920px){
+
+    .game_options {
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+    
+    .game_options button {
+        font-size: 1.1rem;
+        line-height: 1.4em;
+    }
+}

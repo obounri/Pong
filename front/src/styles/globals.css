@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: gaming-font;
+  src: url('./DigitalGlitchDemoRegular-8MleD.ttf');
+}
+
+@font-face {
+  font-family: arcade-font;
+  src: url('./ka1.ttf');
+}
+
+
+@font-face {
+  font-family: pixel-font;
+  src: url('./3D-Thirteen-Pixel-Fonts.ttf');
+}
+
+@font-face {
+  font-family: thirteen-pixel-fonts;
+  src: url('./Thirteen-Pixel-Fonts.ttf');
+}
+
+@font-face {
+  font-family: neue-pixel-font;
+  src: url('./NeuePixelSans.ttf');
+}
+
+@font-face {
+  font-family: classic-font;
+  src: url('./PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: astron-boy-wonder;
+  src: url('./astron\ boy\ wonder.otf');
+}
+
+@font-face {
+  font-family: astron-boy;
+  src: url('./astron\ boy.otf');
+}
+
+@font-face {
+  font-family: astron-boy-italic;
+  src: url('./astron\ boy\ italic.otf');
+}
+
+@font-face {
+  font-family: astron-boy-video;
+  src: url('./astron\ boy\ video.otf');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+
+h3 {
+  font-family: gaming-font;
+  text-align: center;
+  font-size: 4vw;
+  color: #fff;
+}
+
+:root {
+  --media-background-color: #A06BAF;
+  --media-primary-color: #B35BA8;
+  --primary-dark-color: #0A264D;
+  --secondary-dark-color: #0C3064;
+  --primary-light-color: #134FA3;
+  --secondary-light-color: #B39CD0;
+  --btn-light-color: #5857A9;
+  --btn-dark-color: #A06BAF;
+  
+  --top-dark-gradient-color: linear-gradient(to right top, #a06baf, #8963ad, #6d5bab, #4c55a8, #134fa3);
+  --transparent-top-dark-gradient-color: linear-gradient(to right top, hsl(287, 30%, 55%, 0.7), hsl(271, 31%, 53%, 0.7), hsl(253, 32%, 51%, 0.7), hsl(234, 38%, 48%, 0.7), hsl(215, 79%, 36%, 0.7));
+  
+  --transparent-left-light-gradient-color: linear-gradient(to bottom, hsl(287, 30%, 55%, 0.7), hsl(276, 31%, 54%, 0.7), hsl(265, 32%, 53%, 0.7), hsl(253, 32%, 51%, 0.7), hsl(241, 32%, 50%, 0.7));
+  
+  --bottom-dark-gradient-color: linear-gradient(to left bottom, #a06baf, #8963ad, #6d5bab, #4c55a8, #134fa3);
+  --transparent-bottom-dark-gradient-color: linear-gradient(to left bottom, hsl(287, 30%, 55%, 0.7), hsl(271, 31%, 53%, 0.7), hsl(253, 32%, 51%, 0.7), hsl(234, 38%, 48%, 0.7), hsl(215, 79%, 36%, 0.7));
+  
+  --top-light-gradient-color: linear-gradient(to right bottom, #134fa3, #1558b5, #1761c8, #196bdb, #1c74ee);
+  --bottom-light-gradient-color: linear-gradient(to left top, #134fa3, #1558b5, #1761c8, #196bdb, #1c74ee);
+}

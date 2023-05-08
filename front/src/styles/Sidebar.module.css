@@ -1,0 +1,119 @@
+.sidebar {
+    background: var(--transparent-left-light-gradient-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17rem;
+    margin-top: 3.55rem;
+    overflow: auto;
+}
+
+.sidebar ul li:first-child {
+    margin-top: -1rem;
+    border-top: var(--btn-dark-color) solid 4px;
+}
+
+.sidebar ul {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin: .1rem;
+}
+
+.btn {
+    display: block;
+    font-family: thirteen-pixel-fonts;
+    /* font-family: classic-font; */
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border: none;
+    background: hsl(0, 0%, 100%, 0.15);
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+    border-radius: 7px;
+    border-bottom: var(--btn-dark-color) solid 1px;
+    transition: background 0.3s ease-in, box-shadow 0.4s ease-in;
+}
+
+#logout {
+    color: var(--primary-dark-color);
+    background: #845EC2;
+    border-radius: 0%;
+    border: var(--btn-light-color) 1px solid;
+}
+
+#logout:hover {
+    color: var(--btn-light-color);
+    color: #f4f4f4;
+    background: #FF6F91;
+}
+
+.selectedbtn {
+    font-family: thirteen-pixel-fonts;
+    /* font-family: classic-font; */
+    font-size: 1.2em;
+    display: block;
+    padding: 1rem 3rem;
+    border: none;
+    background: hsl(282, 100%, 96%, 0.9);
+    cursor: pointer;
+    color: #000;
+    width: 100%;
+    border-radius: 4px;
+    border-bottom: var(--btn-dark-color) solid 1px;
+    border: solid 1px var(--btn-light-color);
+    margin-top: 0.1rem;
+    box-shadow: #000 0px 1px 0px 1px;
+}
+
+.icon {
+    display: none;
+}
+
+.btn:hover {
+    background: var(--btn-dark-color);
+    box-shadow: 1px 1px var(--btn-dark-color);
+}
+
+@media (max-width: 1050px) {
+    .sidebar {
+        overflow: auto;
+        padding: 0rem;
+        width: 4.5rem;
+    }
+    
+    .icon {
+        display: block;
+    }
+    
+    .content {
+        display: none;
+    }
+    
+    .btn,
+    .selectedbtn
+     {
+        padding: 1rem;
+    }
+}
+    
+@media (max-width: 400px) {
+    .sidebar {
+        margin-top: 3.3rem;
+    }
+    .sidebar ul li:first-child {
+        margin-top: -1rem;
+        border-top: var(--btn-light-color) solid 1px;
+    }
+}
+

@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  front:
+    build: ./front
+    image: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
+    networks:
+      - backend
+    volumes:
+      - ./front:/app/
+      - /app/node_modules
+
+  back:
+    build: ./back
+    image: backend
+    restart: always
+    ports:
+      - "3300:3300"
+    depends_on:
+      - db
+    env_file:
+      - ./back/.env
+    networks:
+      - backend
+    volumes:
+      - ./back:/app/
+      - /app/node_modules
+
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./back/.env
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
