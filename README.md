@@ -1,11 +1,6 @@
 ## Usage :
 ``` npm i ```
 
-then
-
-copy it from trello
-```back/.env```
-
 ```
 # To start the project
 docker-compose up
